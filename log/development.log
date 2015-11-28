@@ -1,0 +1,1167 @@
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateBookjudges (20151128035554)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "bookjudges" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "author" varchar, "isbn" varchar, "judge_result" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151128035554"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for ::1 at 2015-11-28 12:57:01 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 25ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 12:57:11 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1907ms (Views: 1903.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.self-28082a172d90d29360b32357b5cc2dab3c2e1fbbbdac8f362e3b9abc379aa4c5.css?body=1" for ::1 at 2015-11-28 12:57:13 +0900
+
+
+Started GET "/assets/bookjudges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-28 12:57:13 +0900
+
+
+Started GET "/assets/bookjudges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-28 12:57:13 +0900
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 12:57:47 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (33.9ms)
+  Rendered bookjudges/new.html.erb within layouts/application (43.8ms)
+Completed 200 OK in 97ms (Views: 87.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 12:59:25 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (3.6ms)
+  Rendered bookjudges/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bookjudges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-28 12:59:25 +0900
+
+
+Started GET "/assets/scaffolds.self-28082a172d90d29360b32357b5cc2dab3c2e1fbbbdac8f362e3b9abc379aa4c5.css?body=1" for ::1 at 2015-11-28 12:59:25 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-28 12:59:25 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-28 12:59:25 +0900
+
+
+Started GET "/assets/bookjudges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-28 12:59:25 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-28 12:59:25 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-28 12:59:25 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-28 12:59:25 +0900
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 13:03:22 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (5.5ms)
+  Rendered bookjudges/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 67ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-28 13:03:22 +0900
+
+
+Started GET "/assets/bookjudges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-28 13:03:23 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-28 13:03:23 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-28 13:03:23 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-28 13:03:23 +0900
+
+
+Started GET "/assets/bookjudges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-28 13:03:23 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-28 13:03:23 +0900
+
+
+Started GET "/assets/scaffolds.self-28082a172d90d29360b32357b5cc2dab3c2e1fbbbdac8f362e3b9abc379aa4c5.css?body=1" for ::1 at 2015-11-28 13:03:23 +0900
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 13:11:04 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.3ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 48ms (Views: 44.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 13:11:06 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (3.4ms)
+  Rendered bookjudges/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 56ms (Views: 50.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 13:11:15 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WLWHPh0fYWOIqAlguTZYneM8DkA4wIARPZAU8Bg+mxJL7/2BJ9l7YG4INY7YLCVa5mWtywE3Gfvt6PgANsApkQ==", "bookjudge"=>{"title"=>"", "author"=>"", "isbn"=>"aa"}, "commit"=>"Create Bookjudge"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "bookjudges" ("title", "author", "isbn", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["author", ""], ["isbn", "aa"], ["created_at", "2015-11-28 04:11:15.013673"], ["updated_at", "2015-11-28 04:11:15.013673"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/bookjudges/1
+Completed 302 Found in 10ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/bookjudges/1" for ::1 at 2015-11-28 13:11:15 +0900
+Processing by BookjudgesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookjudge Load (0.3ms)[0m  [1mSELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered bookjudges/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 47ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 13:11:18 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 13:11:19 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (2.4ms)
+  Rendered bookjudges/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 13:11:21 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xVATabmo53OLa7qwOLN7qYeM2rH1H3I5CdqqSJMKfLDWCmnWg279cG3Lhl5ZqQZugtV5Oszo69PZoka4vfTOMw==", "bookjudge"=>{"title"=>"", "author"=>"", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ArgumentError (too few arguments):
+  app/controllers/bookjudges_controller.rb:30:in `format'
+  app/controllers/bookjudges_controller.rb:30:in `create'
+
+
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.0ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (75.8ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (169.7ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 13:12:08 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.3ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 13:12:10 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (3.1ms)
+  Rendered bookjudges/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 13:12:11 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q3aj6b6XfSbQ5LH0AppHUiDbzGQusAEc1hUyxb59NkhQLNlWhFFnJTZEjRpjgDqVJYJv7xdHmPYGbd41kIOEyw==", "bookjudge"=>{"title"=>"", "author"=>"", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ArgumentError (too few arguments):
+  app/controllers/bookjudges_controller.rb:30:in `format'
+  app/controllers/bookjudges_controller.rb:30:in `create'
+
+
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.9ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (70.5ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (156.9ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 13:15:27 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.3ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 13:15:29 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (2.4ms)
+  Rendered bookjudges/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 13:15:30 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lwwbM0XlaTwzp1YtVVPLvgdvmEDmsNEdgZs65ldGmgiEVmGMfyNzP9UHasM0SbZ5AjY7y99HSPdR49YWebgoiw==", "bookjudge"=>{"title"=>"", "author"=>"", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "bookjudges" ("title", "author", "isbn", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", ""], ["author", ""], ["isbn", ""], ["created_at", "2015-11-28 04:15:30.944356"], ["updated_at", "2015-11-28 04:15:30.944356"]]
+  [1m[36m (7.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/bookjudges/2
+Completed 302 Found in 12ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/bookjudges/2" for ::1 at 2015-11-28 13:15:30 +0900
+Processing by BookjudgesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered bookjudges/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 13:15:35 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.2ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 13:15:56 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.3ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 13:15:59 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (2.3ms)
+  Rendered bookjudges/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 13:16:00 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VOyMlR/i0pAq8LWhdQti21Md41x3rky/XFln76Eg+p5HtvYqJSTIk8xQiU8UER8cVkRA105Z1VWMIYsfj95IHQ==", "bookjudge"=>{"title"=>"", "author"=>"", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+  Rendered bookjudges/_form.html.erb (2.2ms)
+  Rendered bookjudges/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 13:16:04 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.3ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 13:16:57 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (2.8ms)
+  Rendered bookjudges/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 50ms (Views: 40.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 13:16:59 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mp1v3t4ZhwlsRCgp3aj1uLWSGnvFR1p1NTo37c01JMGJxxVh5N+dCorkFMe8soh/sMu58Pyww5/lQtsd48uWQg==", "bookjudge"=>{"title"=>"", "author"=>"", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 13:16:59 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.3ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:28:44 +0900
+
+LoadError (cannot load such file -- rest-client):
+  app/controllers/bookjudges_controller.rb:2:in `<top (required)>'
+
+
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.6ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.8ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (79.9ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (171.1ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:29:38 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 280ms (Views: 265.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 14:29:41 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (25.7ms)
+  Rendered bookjudges/new.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 83ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 14:30:03 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MC0dFtu/Yh/AFP/E6S4Hr99wFIlzv1iWg2CEI1WdHrwjd2ep4Xl4HCa0wyqINHpo2im3AkpIwXxTGGjTe2OsPw==", "bookjudge"=>{"title"=>"", "author"=>"", "isbn"=>"4163689400"}, "commit"=>"Create Bookjudge"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "bookjudges" ("title", "author", "isbn", "judge_result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", ""], ["author", ""], ["isbn", "4163689400"], ["judge_result", 0], ["created_at", "2015-11-28 05:30:04.614295"], ["updated_at", "2015-11-28 05:30:04.614295"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/bookjudges/3
+Completed 302 Found in 738ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/bookjudges/3" for ::1 at 2015-11-28 14:30:04 +0900
+Processing by BookjudgesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mBookjudge Load (0.3ms)[0m  SELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered bookjudges/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 61ms (Views: 52.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:30:09 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.2ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 14:32:11 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (2.8ms)
+  Rendered bookjudges/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 55ms (Views: 46.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 14:32:16 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zY+AbpwW2zliqxJ+/4Yq/TyICU8O+ucOwWwUO/bzdQze1frRptDBOoQLLpCenFc6OdGqxDcNfuQRFPjL2A3Hjw==", "bookjudge"=>{"title"=>"", "author"=>"", "isbn"=>"4163689400"}, "commit"=>"Create Bookjudge"}
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 2218ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:32:18 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.3ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 14:33:41 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (2.9ms)
+  Rendered bookjudges/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 59ms (Views: 51.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 14:33:45 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8uQZPkG5wsG2Cuibt1OI8n1krSMhyo7CTOYDl+Q2LGDhvmOBe3/YwlCq1HXWSfU1eD0OqBg9Fyicnu9nysie4w==", "bookjudge"=>{"title"=>"", "author"=>"", "isbn"=>"4163689400"}, "commit"=>"Create Bookjudge"}
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 395ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:33:46 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.3ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 64ms (Views: 62.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 14:33:49 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (3.7ms)
+  Rendered bookjudges/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 14:34:13 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1pwuvG+NfUylwNSLmqFLRWPJPaB/JyxjLVLBXws1aP7FxlQDVUtnT0Ng6GX7uzaCZpCeK0bQtYn9Ki2vJcvafQ==", "bookjudge"=>{"title"=>"", "author"=>"", "isbn"=>"4169689400"}, "commit"=>"Create Bookjudge"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "bookjudges" ("title", "author", "isbn", "judge_result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["author", ""], ["isbn", "4169689400"], ["judge_result", 1], ["created_at", "2015-11-28 05:34:13.535580"], ["updated_at", "2015-11-28 05:34:13.535580"]]
+  [1m[35m (8.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/bookjudges/4
+Completed 302 Found in 282ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/bookjudges/4" for ::1 at 2015-11-28 14:34:13 +0900
+Processing by BookjudgesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBookjudge Load (0.3ms)[0m  [1mSELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered bookjudges/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:34:21 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 48ms (Views: 47.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:37:33 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.3ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:40:20 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-28 14:40:21 +0900
+
+
+Started GET "/assets/bookjudges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-28 14:40:21 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-28 14:40:21 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-28 14:40:21 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-28 14:40:21 +0900
+
+
+Started GET "/assets/bookjudges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-28 14:40:21 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-28 14:40:21 +0900
+
+
+Started GET "/assets/scaffolds.self-28082a172d90d29360b32357b5cc2dab3c2e1fbbbdac8f362e3b9abc379aa4c5.css?body=1" for ::1 at 2015-11-28 14:40:21 +0900
+
+
+Started DELETE "/bookjudges/1" for ::1 at 2015-11-28 14:40:31 +0900
+Processing by BookjudgesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3Y8tXXaH0bio1v8BH2ju8YZNUjtxbg+nNDFI5dmtRLTO1VfiTEHLu052w+9+cpM2gxTxsEiZlk3kSaQV91P2Nw==", "id"=>"1"}
+  [1m[36mBookjudge Load (0.2ms)[0m  [1mSELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "bookjudges" WHERE "bookjudges"."id" = ?[0m  [["id", 1]]
+  [1m[35m (4.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 9ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:40:31 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.2ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/bookjudges/2" for ::1 at 2015-11-28 14:40:34 +0900
+Processing by BookjudgesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wxintSGAgGxqieLssaY3o5sZdceKmCANAIZu2apnSlPQQt0KG0aab4wp3gLQvEpknkDWTLNvuefQ/oIphJn40A==", "id"=>"2"}
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "bookjudges" WHERE "bookjudges"."id" = ?  [["id", 2]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:40:34 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.3ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/bookjudges/3" for ::1 at 2015-11-28 14:40:39 +0900
+Processing by BookjudgesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QnIyQtWnLKM5leeiXTlHKwSQE0HysDcvqQ0C1KUggtZRKEj972E2oN8120w8IzrsAcmwystHrsV5de4ki94wVQ==", "id"=>"3"}
+  [1m[36mBookjudge Load (0.1ms)[0m  [1mSELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "bookjudges" WHERE "bookjudges"."id" = ?[0m  [["id", 3]]
+  [1m[35m (6.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 10ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:40:39 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.2ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 14:40:58 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (3.2ms)
+  Rendered bookjudges/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 50ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 14:41:43 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"piX6Ht1bxCmtXzuKHK0utpbcnEwwaiGnnRWPpI4Xnz+1f4Ch553eKkv/B2R9t1Nxk4U/xwmduE1NbWNUoOktvA==", "bookjudge"=>{"title"=>"村上春樹", "author"=>"パン屋再襲撃", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "bookjudges" ("title", "author", "isbn", "judge_result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "村上春樹"], ["author", "パン屋再襲撃"], ["isbn", ""], ["judge_result", 1], ["created_at", "2015-11-28 05:41:47.990035"], ["updated_at", "2015-11-28 05:41:47.990035"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/bookjudges/5
+Completed 302 Found in 4335ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/bookjudges/5" for ::1 at 2015-11-28 14:41:48 +0900
+Processing by BookjudgesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBookjudge Load (0.2ms)[0m  [1mSELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered bookjudges/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:43:28 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.4ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 14:43:30 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (2.4ms)
+  Rendered bookjudges/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 14:43:47 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UhQRpp2C6ntOdrBV4QxqwTX/zUP0cP/0wwJus4C8i1hBTmsZp0TweKjWjLuAFhcGMKZuyM2HZh4TeoJDrkI52w==", "bookjudge"=>{"title"=>"村上春樹", "author"=>"パン屋再襲撃", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of Array into String):
+  app/controllers/bookjudges_controller.rb:61:in `+'
+  app/controllers/bookjudges_controller.rb:61:in `create'
+
+
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.2ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (93.7ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/komadanaoki/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (189.8ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 14:44:13 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sp4QNLERG7o1gOHTWjJspawJXe9aVahP6CxicsfFR2WhxGqLi9cBudMg3T07KBFiqVD+ZGOiMaU4VI6C6Tv15g==", "bookjudge"=>{"title"=>"村上春樹", "author"=>"パン屋再襲撃", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.6ms)[0m  INSERT INTO "bookjudges" ("title", "author", "isbn", "judge_result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "村上春樹"], ["author", "パン屋再襲撃"], ["isbn", ""], ["judge_result", 1], ["created_at", "2015-11-28 05:44:16.942814"], ["updated_at", "2015-11-28 05:44:16.942814"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/bookjudges/6
+Completed 302 Found in 3762ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/bookjudges/6" for ::1 at 2015-11-28 14:44:16 +0900
+Processing by BookjudgesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered bookjudges/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 14:46:20 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (4.0ms)
+  Rendered bookjudges/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 57ms (Views: 49.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bookjudges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-28 14:46:20 +0900
+
+
+Started GET "/assets/scaffolds.self-28082a172d90d29360b32357b5cc2dab3c2e1fbbbdac8f362e3b9abc379aa4c5.css?body=1" for ::1 at 2015-11-28 14:46:20 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-28 14:46:20 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-28 14:46:20 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-28 14:46:20 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-28 14:46:20 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-28 14:46:20 +0900
+
+
+Started GET "/assets/bookjudges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-28 14:46:20 +0900
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 14:46:33 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8F3EP9RwyHwk3Thtw38nVAIN2dnCptrYr0fpbnwzBjrjB76A7rbSf8J9BIOiZVqTB1R6UvtRQzJ/PwWeUs20uQ==", "bookjudge"=>{"title"=>"村上春樹", "author"=>"パン屋再襲撃", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "bookjudges" ("title", "author", "isbn", "judge_result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "村上春樹"], ["author", "パン屋再襲撃"], ["isbn", ""], ["judge_result", 1], ["created_at", "2015-11-28 05:46:33.640194"], ["updated_at", "2015-11-28 05:46:33.640194"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/bookjudges/7
+Completed 302 Found in 130ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/bookjudges/7" for ::1 at 2015-11-28 14:46:33 +0900
+Processing by BookjudgesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered bookjudges/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:48:11 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.4ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 54ms (Views: 50.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 14:48:14 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (2.7ms)
+  Rendered bookjudges/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 14:48:35 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u72Pdf4wxng0B82wlP1cW7KFXm9VqkbwfpER2BvtSvao5/XKxPbce9Kn8V715yGct9z95Gxd3xqu6f0oNRP4dQ==", "bookjudge"=>{"title"=>"パン屋再襲撃", "author"=>"村上春樹", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 5237ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:48:40 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.4ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/bookjudges/5" for ::1 at 2015-11-28 14:49:12 +0900
+Processing by BookjudgesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AV6AwuwhFpkSsp3tyn824cTsGCiUnMkzUqJ0BQNuyqwSBPp91ucMmvQSoQOrZUsmwbW7o61rUNmC2pj1LZB4Lw==", "id"=>"5"}
+  [1m[36mBookjudge Load (0.2ms)[0m  [1mSELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "bookjudges" WHERE "bookjudges"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:49:12 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.3ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/bookjudges/6" for ::1 at 2015-11-28 14:49:15 +0900
+Processing by BookjudgesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0hFhlNzpWrw/tXdz0/lAreBLOcWNNnlvp6wUrVRNMJbBSxsr5i9Av9kVS52y4z1q5RKaTrTB4IV31PhderOCFQ==", "id"=>"6"}
+  [1m[35mBookjudge Load (0.1ms)[0m  SELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "bookjudges" WHERE "bookjudges"."id" = ?  [["id", 6]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 8ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:49:15 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.4ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/bookjudges/7" for ::1 at 2015-11-28 14:49:18 +0900
+Processing by BookjudgesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dKz32398kizEyDrXRjyXgw4ZZ4rdP1Ge6xpV2jpkDeFn9o1kRbqILyJoBjknJupEC0DEAeTIyHQ7YrkqFJq/Yg==", "id"=>"7"}
+  [1m[36mBookjudge Load (0.1ms)[0m  [1mSELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "bookjudges" WHERE "bookjudges"."id" = ?[0m  [["id", 7]]
+  [1m[35m (6.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 10ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:49:18 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.2ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:49:53 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-28 14:49:53 +0900
+
+
+Started GET "/assets/scaffolds.self-28082a172d90d29360b32357b5cc2dab3c2e1fbbbdac8f362e3b9abc379aa4c5.css?body=1" for ::1 at 2015-11-28 14:49:53 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-28 14:49:53 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-28 14:49:53 +0900
+
+
+Started GET "/assets/bookjudges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-28 14:49:53 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-28 14:49:53 +0900
+
+
+Started GET "/assets/bookjudges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-28 14:49:53 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-28 14:49:53 +0900
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:52:14 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.2ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bookjudges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-28 14:52:14 +0900
+
+
+Started GET "/assets/scaffolds.self-28082a172d90d29360b32357b5cc2dab3c2e1fbbbdac8f362e3b9abc379aa4c5.css?body=1" for ::1 at 2015-11-28 14:52:14 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-28 14:52:14 +0900
+
+
+Started GET "/assets/bookjudges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-28 14:52:14 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-28 14:52:14 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-28 14:52:14 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-28 14:52:14 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-28 14:52:14 +0900
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:52:54 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.3ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-28 14:52:55 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-28 14:52:55 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-28 14:52:55 +0900
+
+
+Started GET "/assets/scaffolds.self-28082a172d90d29360b32357b5cc2dab3c2e1fbbbdac8f362e3b9abc379aa4c5.css?body=1" for ::1 at 2015-11-28 14:52:55 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-28 14:52:55 +0900
+
+
+Started GET "/assets/bookjudges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-28 14:52:55 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-28 14:52:55 +0900
+
+
+Started GET "/assets/bookjudges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-28 14:52:55 +0900
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 14:53:05 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (2.3ms)
+  Rendered bookjudges/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:54:10 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.2ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 14:54:37 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (2.4ms)
+  Rendered bookjudges/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 14:55:33 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (2.5ms)
+  Rendered bookjudges/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-28082a172d90d29360b32357b5cc2dab3c2e1fbbbdac8f362e3b9abc379aa4c5.css?body=1" for ::1 at 2015-11-28 14:55:33 +0900
+
+
+Started GET "/assets/bookjudges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-28 14:55:33 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-28 14:55:33 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-28 14:55:33 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-28 14:55:33 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-28 14:55:33 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-28 14:55:33 +0900
+
+
+Started GET "/assets/bookjudges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-28 14:55:33 +0900
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:55:39 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 14:57:02 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (2.9ms)
+  Rendered bookjudges/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 40ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 14:57:18 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PF4LqeO+gJzaIZ0FWs6dZ2w0lhoybE6P4vA8yxV7CYsvBHEW2XianzyBoes71OCgaW01kQub12UyiNA7O4W7CA==", "bookjudge"=>{"title"=>"パン屋再襲撃", "author"=>"村上春樹", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 4636ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:57:23 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.1ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 14:59:53 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.3ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/bookjudges/4" for ::1 at 2015-11-28 15:01:54 +0900
+Processing by BookjudgesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qmQKZlAWIE0HsEyiZc6d7FzOaqTkUPcnGHULvqCxlq+5PnDZatA6TuEQcEwE1OArWZfJL92nbs3IDedOjk8kLA==", "id"=>"4"}
+  [1m[36mBookjudge Load (1.1ms)[0m  [1mSELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "bookjudges" WHERE "bookjudges"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 29ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 15:01:54 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.3ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 87ms (Views: 85.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 15:02:00 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (6.9ms)
+  Rendered bookjudges/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 74ms (Views: 72.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 15:02:24 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kPySTWk98+FW44vJSdaLWu4SKYgpGLEVEWetPAttGxyDpujyU/vp4rBDtycozPad60uKAxDvKP/BH0HMJZOpnw==", "bookjudge"=>{"title"=>"パン屋再襲撃", "author"=>"村上春樹", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 1903ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 15:02:26 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 61ms (Views: 60.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 15:03:01 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (3.7ms)
+  Rendered bookjudges/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 77ms (Views: 76.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 15:03:41 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f1F2LgOVcGBySVXQMNeXpHKXSJUJ12HyEUOmVw/ahq5sCwyROVNqY5TpaT5Rzepjd87rHjAg+BjBO0qnISQ0LQ==", "bookjudge"=>{"title"=>"存在しないタイトル", "author"=>"村上春樹", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "bookjudges" ("title", "author", "isbn", "judge_result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "存在しないタイトル"], ["author", "村上春樹"], ["isbn", ""], ["judge_result", 1], ["created_at", "2015-11-28 06:03:41.467668"], ["updated_at", "2015-11-28 06:03:41.467668"]]
+  [1m[36m (6.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/bookjudges/8
+Completed 302 Found in 268ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/bookjudges/8" for ::1 at 2015-11-28 15:03:41 +0900
+Processing by BookjudgesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered bookjudges/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 15:04:18 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.2ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 15:18:43 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.7ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 111ms (Views: 98.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/scaffolds.self-28082a172d90d29360b32357b5cc2dab3c2e1fbbbdac8f362e3b9abc379aa4c5.css?body=1" for ::1 at 2015-11-28 15:18:43 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-28 15:18:43 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-28 15:18:43 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-28 15:18:43 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-28 15:18:43 +0900
+
+
+Started GET "/assets/bookjudges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-28 15:18:43 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-28 15:18:43 +0900
+
+
+Started GET "/assets/bookjudges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-28 15:18:43 +0900
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 15:18:46 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (11.2ms)
+  Rendered bookjudges/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 65ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 15:19:46 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (7.9ms)
+  Rendered bookjudges/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-28 15:19:46 +0900
+
+
+Started GET "/assets/bookjudges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-28 15:19:46 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-11-28 15:19:46 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-11-28 15:19:46 +0900
+
+
+Started GET "/assets/scaffolds.self-28082a172d90d29360b32357b5cc2dab3c2e1fbbbdac8f362e3b9abc379aa4c5.css?body=1" for ::1 at 2015-11-28 15:19:46 +0900
+
+
+Started GET "/assets/bookjudges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-28 15:19:46 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-28 15:19:46 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-28 15:19:46 +0900
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 15:20:01 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tCgZhO54fPMT8OsrjevUObupUacJORZIEoYu9V86jWqncmM71L5m8PVQ18Xs8an+vvDyLDDOj6LC/sIFccQ/6Q==", "bookjudge"=>{"title"=>"羊をめぐる冒険", "author"=>"講談社", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 3228ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 15:20:04 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.3ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 15:20:09 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (4.0ms)
+  Rendered bookjudges/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bookjudges" for ::1 at 2015-11-28 15:20:20 +0900
+Processing by BookjudgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MOyUjz/x1jj+Wb24L0Vu9Z2jj2hNe/9a1Wrk2k2xlOUjtu4wBTfMOxj5gVZOXxMymPos43SMZrAFEggqY08mZg==", "bookjudge"=>{"title"=>"牛をめぐる冒険", "author"=>"村上春樹", "isbn"=>""}, "commit"=>"Create Bookjudge"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (6.8ms)[0m  [1mINSERT INTO "bookjudges" ("title", "author", "isbn", "judge_result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "牛をめぐる冒険"], ["author", "村上春樹"], ["isbn", ""], ["judge_result", 1], ["created_at", "2015-11-28 06:20:20.745251"], ["updated_at", "2015-11-28 06:20:20.745251"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/bookjudges/9
+Completed 302 Found in 286ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/bookjudges/9" for ::1 at 2015-11-28 15:20:20 +0900
+Processing by BookjudgesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mBookjudge Load (0.2ms)[0m  [1mSELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered bookjudges/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 15:20:23 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/bookjudges/8" for ::1 at 2015-11-28 15:20:27 +0900
+Processing by BookjudgesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Tog66qGaQbd9gaqtYMqAJYwAZc3m0b2rmL+QGOmWEUhd0kBVm1xbtJshlkMB0P3iiVnGRt8mJEFIx3zox2ijyw==", "id"=>"8"}
+  [1m[36mBookjudge Load (0.2ms)[0m  [1mSELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "bookjudges" WHERE "bookjudges"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 15:20:27 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.2ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/bookjudges/9" for ::1 at 2015-11-28 15:20:29 +0900
+Processing by BookjudgesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1cO+QFHQdYKj44ftfuY4cvQUA6n1HWmH/0JEvfLFQ/HGmcT/axZvgUVDuwMf/EW18U2gIszq8G0vOqhN3Dvxcg==", "id"=>"9"}
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT  "bookjudges".* FROM "bookjudges" WHERE "bookjudges"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "bookjudges" WHERE "bookjudges"."id" = ?  [["id", 9]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/bookjudges
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 15:20:29 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.2ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 15:23:11 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (3.9ms)
+  Rendered bookjudges/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 15:38:42 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[36mBookjudge Load (0.6ms)[0m  [1mSELECT "bookjudges".* FROM "bookjudges"[0m
+  Rendered bookjudges/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 68ms (Views: 59.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bookjudges" for ::1 at 2015-11-28 15:48:43 +0900
+Processing by BookjudgesController#index as HTML
+  [1m[35mBookjudge Load (0.7ms)[0m  SELECT "bookjudges".* FROM "bookjudges"
+  Rendered bookjudges/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 94ms (Views: 80.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/bookjudges/new" for ::1 at 2015-11-28 15:48:46 +0900
+Processing by BookjudgesController#new as HTML
+  Rendered bookjudges/_form.html.erb (8.6ms)
+  Rendered bookjudges/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 67ms (Views: 56.1ms | ActiveRecord: 0.4ms)

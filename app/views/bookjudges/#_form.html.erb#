@@ -1,0 +1,38 @@
+<%= form_for(@bookjudge) do |f| %>
+  <% if @bookjudge.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bookjudge.errors.count, "error") %> prohibited this bookjudge from being saved:</h2>
+
+      <ul>
+      <% @bookjudge.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h3>タイトルと出版者で調べる</h3>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label "publisher" %><br>
+    <%= f.text_field :author %>
+  </div>
+
+  <h3>ISBNで調べる</h3>
+  <div class="field">
+    <%= f.label :isbn %><br>
+    <%= f.text_field :isbn %>
+  </div>
+  <!--
+  <div class="field">
+    <%= f.label :judge_result %><br>
+    <%= f.number_field :judge_result %>
+  </div>
+  -->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

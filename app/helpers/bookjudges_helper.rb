@@ -1,0 +1,2 @@
+module BookjudgesHelper
+end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @bookjudge.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @bookjudge.author %>
+</p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @bookjudge.isbn %>
+</p>
+
+<p>
+  <strong>Judge result:</strong>
+  <%= @bookjudge.judge_result %>
+</p>
+
+<%= link_to 'Edit', edit_bookjudge_path(@bookjudge) %> |
+<%= link_to 'Back', bookjudges_path %>
