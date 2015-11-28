@@ -33,7 +33,8 @@ class BookjudgesController < ApplicationController
     @bookjudge = Bookjudge.new(bookjudge_params)
 
 
-    ndl_result = judge_by_ndl @bookjudge
+    ndl_result_hash = judge_by_ndl @bookjudge
+    ndl_result = ndl_result_hash[:result]
     yunica_result = judge_by_yunica @bookjudge
 
 
@@ -50,8 +51,11 @@ class BookjudgesController < ApplicationController
       @bookjudge.judge_result = 2
     end
 
-    option_str = "NDLの結果: " + ndl_result.to_s + "<br />"
-    option_str += "ゆにかねっとの結果: " + yunica_result.to_s + "<br />"
+    title = ""
+    title = ndl_result_hash[:title] if ndl_result_hash[:title]
+
+    option_str = "NDLの結果: " + title + " -> " + ndl_result.to_s + ""
+    option_str += "ゆにかねっとの結果: -> " + yunica_result.to_s + ""
 
     #返却
     respond_to do |format|
@@ -122,11 +126,14 @@ class BookjudgesController < ApplicationController
     str = ""
     myarr = Array.new
     doc.xpath('/rss/channel/item/title').each do |item|
-      myarr.push(item)
+      myarr.push(item.text)
     end
 
     #結果判定
-    (myarr.size > 0) ? true : false  #ndlで調べた結果 あったらtrue
+    judge_r = (myarr.size > 0) ? true : false  #ndlで調べた結果 あったらtrue
+    result_hash = {:result => judge_r, :title => myarr.first }
+    logger.debug(result_hash.to_s)
+    result_hash
   end
 
 
