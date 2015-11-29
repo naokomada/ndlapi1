@@ -10,7 +10,7 @@
       <th>タイトル</th>
       <th>著者</th>
       <th>ISBN</th>
-      <th>納本済みチェック</th>
+      <th>未納本チェック</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,7 +26,7 @@
         <td><%= link_to 'Show', bookjudge %></td>
         <td><%= link_to 'Edit', edit_bookjudge_path(bookjudge) %></td>
 	-->
-        <td><%= link_to 'Destroy', bookjudge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'tweetする', bookjudge, method: :delete, data: { confirm: 'tweetしていいですか?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -3,6 +3,7 @@ require 'rest-client'
 require 'nokogiri'
 require 'uri'
 require "rexml/document"
+require "twitter"
 
 class BookjudgesController < ApplicationController
   before_action :set_bookjudge, only: [:show, :edit, :update, :destroy]
@@ -91,9 +92,31 @@ class BookjudgesController < ApplicationController
   # DELETE /bookjudges/1
   # DELETE /bookjudges/1.json
   def destroy
-    @bookjudge.destroy
+    #@bookjudge.destroy
+
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = ""
+      config.consumer_secret     = ""
+      config.access_token        = ""
+      config.access_token_secret = ""
+    end
+
+    msg = "※テストです※　この本は納本されていないかもしれません。"
+    msg_option = ""
+
+    if @bookjudge.isbn.length > 0
+      msg_option = "ISBN: " + @bookjudge.isbn
+    else
+      msg_option = "タイトル: " + @bookjudge.title + "出版者: " + @bookjudge.author
+    end
+
+
+    # tweet
+    client.update( msg + msg_option )
+    #puts msg + msg_option
+
     respond_to do |format|
-      format.html { redirect_to bookjudges_url, notice: 'Bookjudge was successfully destroyed.' }
+      format.html { redirect_to bookjudges_url, notice: 'tweetしました！' }
       format.json { head :no_content }
     end
   end
@@ -103,9 +126,9 @@ class BookjudgesController < ApplicationController
 
     #共通文字列
     query_str = ""
-    api_path = "http://iss.ndl.go.jp/api/opensearch"
-    normal_query_str = "?title=" + @bookjudge.title.to_s + "&publisher=" + @bookjudge.author
-    isbn_query_str = "?isbn=" + @bookjudge.isbn
+    api_path = "http://iss.ndl.go.jp/api/opensearch?dpid=iss-ndl-opac"
+    normal_query_str = "&title=" + @bookjudge.title.to_s + "&publisher=" + @bookjudge.author
+    isbn_query_str = "&isbn=" + @bookjudge.isbn
 
     #NDLへの検索文字列の作成
     if @bookjudge.isbn.length > 0
